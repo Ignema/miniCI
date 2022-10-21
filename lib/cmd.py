@@ -1,6 +1,6 @@
-import shlex
 import subprocess
 from typing import List
+from settings import s
 
 def exec_command(cmd: List[str]) -> None:
-    subprocess.run(shlex.split(" ".join(cmd)))
+    subprocess.run(cmd, cwd=s.PROJECT_DIR)
